@@ -1,6 +1,6 @@
 # ansible-cisco-type-5 lookup plugin
 
-A lookup plugin to confirm that a type 5 encrypted password is set to what
+Ansible lookup plugin to confirm that a type 5 encrypted password is set to what
 the user expects.  
 
 
@@ -16,7 +16,7 @@ Sample Usage:
   hosts: localhost
   connection: local
   tasks:
-    - name: return fabric node id
+    - name: Check if password is correct
       set_fact:
         pw_correct: "{{ lookup('cisco_type_5', 'cisco', '$1$2ZW8$ADFVs6Pb0zP.r2mr6FgZs1') }}"
 
